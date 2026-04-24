@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b2a4a;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+.left {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h1 {
+    font-size: 55px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.left p {
+    color: #ddd;
+    max-width: 400px;
+}
+
+/* FEATURES */
+.features {
+    margin-top: 30px;
+}
+
+.feature-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.feature-box div {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+button {
+    margin-top: 30px;
+    background: #c94c7c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a63b65;
+}
+
+/* RIGHT IMAGE */
+.right {
+    flex: 1;
+    background: url("{{ url_for('static', filename='images/cows.png') }}") no-repeat center;
+    background-size: cover;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="left">
+        <h1>Smart Cattle Health Monitor</h1>
+
+        <p>
+            AI-powered system to detect cattle diseases using image analysis.
+            Upload images and get instant diagnosis with treatment suggestions.
+        </p>
+
+        <div class="features">
+            <div class="feature-box">
+                <div>⚡ Instant Detection</div>
+                <div>💊 Treatment Tips</div>
+            </div>
+
+            <div class="feature-box">
+                <div>📷 Image Analysis</div>
+                <div>🔐 Secure Access</div>
+            </div>
+        </div>
+
+        <button onclick="location.href='/login'">Start Analysis →</button>
+    </div>
+
+    <div class="right"></div>
+
+</div>
+
+</body>
+</html>

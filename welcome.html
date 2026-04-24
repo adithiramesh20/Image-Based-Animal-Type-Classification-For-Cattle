@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+
+<style>
+body {
+    background: #0b2a4a;
+    font-family: Arial;
+}
+
+.card {
+    width: 500px;
+    margin: 150px auto;
+    background: #f6e6ec;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+button {
+    background: #c94c7c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2>Welcome, {{email}}</h2>
+
+    <!-- ✅ DYNAMIC MESSAGE -->
+    <p>{{message}}</p>
+
+    <a href="/analysis">
+        <button>Go to Analysis</button>
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Upload Cattle Image</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body class="upload-body">
+
+<h1 class="heading">🐄 Cattle Health Detection</h1>
+
+<div class="upload-container">
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+
+<input type="file" name="image" required>
+
+<button type="submit">Analyze Cattle</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

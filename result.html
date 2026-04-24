@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Result</title>
+
+<style>
+body {
+    background: #0b2a4a;
+    font-family: Arial;
+}
+
+/* CARD */
+.card {
+    width: 500px;
+    margin: 80px auto;
+    background: #f6e6ec;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* IMAGE */
+img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* BUTTON */
+button {
+    background: #c94c7c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a63b65;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- PREDICTION -->
+    <h2>{{prediction}}</h2>
+
+    <!-- CONFIDENCE -->
+    <p><b>Confidence:</b> {{confidence}}%</p>
+
+    <!-- IMAGE -->
+    <img src="/{{image_path}}">
+
+    <!-- SOLUTION -->
+    <h3>Solution</h3>
+    <p>{{solution}}</p>
+
+    <!-- PREVENTION -->
+    <h3>Prevention</h3>
+    <p>{{prevention}}</p>
+
+    <a href="/analysis">
+        <button>Analyze Again</button>
+    </a>
+
+</div>
+
+</body>
+</html>

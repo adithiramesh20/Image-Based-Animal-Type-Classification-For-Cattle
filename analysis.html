@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analysis</title>
+
+<style>
+body {
+    background: #0b2a4a;
+    font-family: Arial;
+}
+
+.card {
+    width: 500px;
+    margin: 100px auto;
+    background: #f6e6ec;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+button {
+    background: #c94c7c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* IMAGE PREVIEW */
+#preview {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Upload cattle image</h2>
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+
+    <!-- FILE INPUT -->
+    <input type="file" name="image" id="imageInput" required>
+
+    <!-- IMAGE PREVIEW -->
+    <img id="preview">
+
+    <br><br>
+    <button type="submit">Analyze</button>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("imageInput").onchange = function(event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        const preview = document.getElementById("preview");
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    }
+};
+</script>
+
+</body>
+</html>
